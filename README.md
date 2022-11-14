@@ -28,7 +28,6 @@ sparse-training-via-information
 
 
 ## 2. Requirements
-### Working with CPU/GPU
 If you are using anaconda:
 ```bash
 conda create --name sparse python=3.8
