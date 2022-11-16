@@ -70,9 +70,11 @@ prune_indicator = p.prune_indicator
 batch_size = p.batch_size
 device = p.device
 state_dict_path = final_path / 'state_dicts' / f'epoch_{p.no}.pkl'
+eigen_path = final_path / 'eigen_results'
 log_path = final_path / 'hessian_spectrum.log'
 prune_ratio = p.prune_ratio  # Just a placeholder
 
+if not os.path.exists(eigen_path): os.makedirs(eigen_path)
 
 # ##################################################################
 # 1. Prepartions
@@ -154,8 +156,8 @@ H_eigval, H_eigval_density = H.LanczosApproxSpec(init_poly_deg=p.init_poly_deg,
                                                  poly_deg=p.poly_deg)
 
 # Save the eigenvalue and the corresponding density
-np.save(H_eigval, final_path / 'hessian_eigval')
-np.save(H_eigval_density, final_path / 'hessian_eigval_density')
+np.save(H_eigval, eigen_path / f'hessian_eigval_{p.no}')
+np.save(H_eigval_density, eigen_path / f'hessian_eigval_density_{p.no}')
 logger.info(f'The spectrum is now saved in npz files.')
 
 
@@ -171,7 +173,7 @@ plt.xticks(fontsize=18)
 plt.yticks(fontsize=18)
 plt.tight_layout()
 sea.despine()
-plt.savefig(final_path / 'hessian_spectrum.pdf')
+plt.savefig(eigen_path / f'hessian_spectrum_{p.no}.pdf')
 
 # Log the results
 logger.info('Done!')
