@@ -1,6 +1,6 @@
 """
-[Title] experiment-hessian.py
-[Usage] This is a temporary file to calculate the prediction entropy.
+[Title] experiment-spectrum.py
+[Usage] This is a file to calculate the hessian spectrum.
 """
 
 from helper import utils, pruner, hessian
