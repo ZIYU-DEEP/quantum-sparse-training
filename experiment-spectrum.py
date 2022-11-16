@@ -156,8 +156,8 @@ H_eigval, H_eigval_density = H.LanczosApproxSpec(init_poly_deg=p.init_poly_deg,
                                                  poly_deg=p.poly_deg)
 
 # Save the eigenvalue and the corresponding density
-np.save(H_eigval, eigen_path / f'hessian_eigval_{p.no}')
-np.save(H_eigval_density, eigen_path / f'hessian_eigval_density_{p.no}')
+np.save(eigen_path / f'hessian_eigval_{p.no}', H_eigval)
+np.save(eigen_path / f'hessian_eigval_density_{p.no}', H_eigval_density)
 logger.info(f'The spectrum is now saved in npz files.')
 
 
