@@ -26,11 +26,11 @@ FINETUNE_PATH=${results_root}/cifar100/resnet-32-4/sparse-finetune/method_l1_rat
 SCRATCH_PATH=${results_root}/cifar100/resnet-32-4/sparse-scratch/method_l1_ratio_${prune_ratio}_epochs_250_batch_128_sgd_lr_0.1-stepwise-100-150-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_${random_state}_epoch_pre_200_batch_pre_128_lr_pre_0.1-stepwise-100-150-0.1
 
 # Run the scripts
-srun -w ${node} --gres=gpu:1 -c 6 --mem ${mem} -p ${partition} --job-name=${jobname} python3 experiment-spectrum.py -pi 0 -pt ${DENSE_PATH} -bs ${batch_size} -no ${epoch_no}
+srun -w ${node} --gres=gpu:1 -c 6 --mem ${mem} -p ${partition} --job-name=${jobname} python3 exp-spectrum.py -pi 0 -pt ${DENSE_PATH} -bs ${batch_size} -no ${epoch_no}
 
-srun -w ${node} --gres=gpu:1 -c 6 --mem ${mem} -p ${partition} --job-name=${jobname} python3 experiment-spectrum.py -pt ${FINETUNE_PATH} -pi 1 -bs ${batch_size} -no ${epoch_no}
+srun -w ${node} --gres=gpu:1 -c 6 --mem ${mem} -p ${partition} --job-name=${jobname} python3 exp-spectrum.py -pt ${FINETUNE_PATH} -pi 1 -bs ${batch_size} -no ${epoch_no}
 
-srun -w ${node} --gres=gpu:1 -c 6 --mem ${mem} -p ${partition} --job-name=${jobname} python3 experiment-spectrum.py -pt ${SCRATCH_PATH} -pi 1 -bs ${batch_size} -no ${epoch_no}
+srun -w ${node} --gres=gpu:1 -c 6 --mem ${mem} -p ${partition} --job-name=${jobname} python3 exp-spectrum.py -pt ${SCRATCH_PATH} -pi 1 -bs ${batch_size} -no ${epoch_no}
 
 # Give permissions
 chmod 777 ${results_root}
