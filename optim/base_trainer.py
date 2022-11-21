@@ -29,10 +29,7 @@ class BaseTrainer(ABC):
                  prune_indicator: int,
                  reg_type: str,
                  reg_weight: float,
-                 final_path: str,
-                 train_subset: int,
-                 subset_ratio: float,
-                 subset_method: str):
+                 final_path: str):
         """
         The base trainer for the model.
 
@@ -59,9 +56,6 @@ class BaseTrainer(ABC):
         self.reg_type = reg_type
         self.reg_weight = reg_weight
         self.final_path = Path(final_path)
-        self.train_subset = train_subset
-        self.subset_ratio = subset_ratio
-        self.subset_method = subset_method
 
     @abstractmethod
     def train(self, dataset, net):

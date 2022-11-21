@@ -1,6 +1,6 @@
 """
 [Title] experiment-trace.py
-[Usage] This is a file to calculate the hessian trace.
+[Usage] This is a file to calculate the hessian traces.
 """
 
 # from pyhessian import hessian

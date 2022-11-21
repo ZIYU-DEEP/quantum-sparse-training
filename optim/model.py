@@ -97,7 +97,6 @@ class Model:
               fisher_metric: str='fim_monte_carlo', save_fisher:int=1, save_snr:int=1,
               train_noisy: int=0, prune_indicator: int=0, reg_type: str='none',
               reg_weight: float=0.01, final_path: str='./final_path',
-              train_subset: int=0, subset_ratio: float=0.1, subset_method: str='loss',
               resume_epoch: int=0):
         """
         Call the trainer and get training results.
@@ -115,16 +114,14 @@ class Model:
                                         lr_milestones, lr_gamma, n_epochs, batch_size,
                                         weight_decay, device, n_jobs_dataloader,
                                         fisher_metric, save_fisher, save_snr,
-                                        prune_indicator, final_path,
-                                        train_subset, subset_ratio, subset_method)
+                                        prune_indicator, final_path)
         else:
             self.trainer = Trainer(optimizer_name, momentum, lr, lr_schedule,
                                    lr_milestones, lr_gamma, n_epochs, batch_size,
                                    weight_decay, device, n_jobs_dataloader,
                                    fisher_metric, save_fisher, save_snr,
                                    prune_indicator, reg_type, reg_weight,
-                                   final_path, train_subset, subset_ratio,
-                                   subset_method)
+                                   final_path)
 
         # ------------- Get the trained network ------------- #
         self.net = self.trainer.train(dataset, self.net, resume_epoch)

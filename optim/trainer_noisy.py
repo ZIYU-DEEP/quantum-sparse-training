@@ -1,11 +1,6 @@
 """
 Title: trainer_noisy.py
 Description: A simple trainer for noisy setting.
-Notice:
-    - Does not support subset selection yet.
-      As the testing phase is after the training phase,
-      and such that the evaluation is on the full set,
-      instead of a smaller set.
 """
 
 from helper import utils, algo
@@ -62,10 +57,7 @@ class NoisyTrainer(BaseTrainer):
                  save_fisher: int=1,
                  save_snr: int=1,
                  prune_indicator: int=0,
-                 final_path: str='./final_path',
-                 train_subset: int=0,
-                 subset_ratio: float=0.1,
-                 subset_method: str='loss'):
+                 final_path: str='./final_path'):
         """
         A trainer for model. You should only feed in noisy data loader here.
 
@@ -73,11 +65,9 @@ class NoisyTrainer(BaseTrainer):
         to extract gradients; it is not an indicator if pruning is done during training.
         """
 
-        super().__init__(optimizer_name, momentum, lr, lr_schedule, lr_milestones,
-                         lr_gamma, n_epochs, batch_size, weight_decay, device,
-                         n_jobs_dataloader, fisher_metric, save_fisher, save_snr,
-                         prune_indicator, reg_type, reg_weight, final_path,
-                         train_subset, subset_ratio, subset_method)
+        super().__init__(optimizer_name, momentum, lr, lr_schedule, lr_milestones, lr_gamma,
+                         n_epochs, batch_size, weight_decay, device, n_jobs_dataloader,
+                         fisher_metric, save_fisher, save_snr, prune_indicator, final_path)
 
         # Initialize statistics for training results
         self.best_test_acc = 0

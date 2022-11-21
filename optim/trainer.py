@@ -1,7 +1,6 @@
 """
 Title: trainer.py
 Description: A simple trainer.
-Notice: the train acc and loss are not evaluated correctly.
 """
 
 from helper import utils, algo
@@ -12,6 +11,7 @@ from torch.optim.lr_scheduler import MultiStepLR
 from torch.optim.lr_scheduler import ExponentialLR
 from nngeometry.object import PMatKFAC, PMatEKFAC, PMatDiag, PVector
 from collections import OrderedDict
+from copy import deepcopy
 
 import torch.optim as optim
 import torch.nn as nn
@@ -61,10 +61,7 @@ class Trainer(BaseTrainer):
                  prune_indicator: int=0,
                  reg_type: str='none',
                  reg_weight: float=0.01,
-                 final_path: str='./final_path',
-                 train_subset: int=0,
-                 subset_ratio: float=0.1,
-                 subset_method: str='loss'):
+                 final_path: str='./final_path'):
         """
         A trainer for model.
 
@@ -72,11 +69,10 @@ class Trainer(BaseTrainer):
         to extract gradients; it is not an indicator if pruning is done during training.
         """
 
-        super().__init__(optimizer_name, momentum, lr, lr_schedule, lr_milestones,
-                         lr_gamma, n_epochs, batch_size, weight_decay, device,
-                         n_jobs_dataloader, fisher_metric, save_fisher, save_snr,
-                         prune_indicator, reg_type, reg_weight, final_path,
-                         train_subset, subset_ratio, subset_method)
+        super().__init__(optimizer_name, momentum, lr, lr_schedule, lr_milestones, lr_gamma,
+                         n_epochs, batch_size, weight_decay, device, n_jobs_dataloader,
+                         fisher_metric, save_fisher, save_snr, prune_indicator,
+                         reg_type, reg_weight, final_path)
 
 
         # Initialize statistics for training results
@@ -220,19 +216,11 @@ class Trainer(BaseTrainer):
             for data in train_loader:
                 # Set up data
                 inputs, y, _ = data
+                inputs.requires_grad = True
 
                 # Move data to device; TPU has taken care of it at start
                 if self.device in ['cpu', 'cuda']:
                     inputs, y = inputs.to(self.device), y.to(self.device)
-
-                # Do subset selection to improve generalization
-                if self.train_subset:
-                    inputs, y = algo.subset_selection(inputs, y, net,
-                                                      self.subset_ratio,
-                                                      self.subset_method)
-
-                # Set the require grad as True to use regularizer
-                inputs.requires_grad = True
 
                 # Get prediction results and losses
                 outputs = net(inputs)
@@ -277,19 +265,13 @@ class Trainer(BaseTrainer):
 
 
             # -------------- Get Train Accuracy and losses ---------- #
-            # Notice that we use for loop again for the train loader
-            # This is to accommodate the TPU loader
-            # If you only use GPU, merge this with the above
             for data_ in train_loader:
                 # Set up data
                 inputs_, y_, _ = data_
+                inputs_.requires_grad = True
 
-                # Move data to device
                 if self.device in ['cpu', 'cuda']:
                     inputs_, y_ = inputs_.to(self.device), y_.to(self.device)
-
-                # Set the require grad as True to use regularizer
-                inputs_.requires_grad = True
 
                 # Compute prediction error
                 outputs_ = net(inputs_)
