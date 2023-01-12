@@ -35,6 +35,8 @@ except:
     pass
 # --------------------------------------------------------- #
 
+import torch.distributed as dist
+from torch.nn.parallel import DistributedDataParallel as DDP
 
 # #########################################################################
 # 1. Trainer
@@ -92,6 +94,7 @@ class Trainer(BaseTrainer):
                         'acc_clean_list': [],
                         'acc_generalized_list': [],
                         'acc_memorized_list': []}
+        self.step = 0
 
 
     def train(self, dataset, net, resume_epoch):
@@ -106,8 +109,15 @@ class Trainer(BaseTrainer):
 
         # ==================== Configure device for network =================== #
         # Set the device for network
-        if self.device == 'cuda':
-            net = torch.nn.DataParallel(net).to(self.device)
+        if self.device[:4] == 'cuda':
+            print('Here3')
+            rank = dist.get_rank()
+            print(f"Start running on rank {rank}.")
+            device_id = rank % 4
+            net = net.to(device_id)
+            net = DDP(net, device_ids=[device_id])
+            self.device = 'cuda:{}'.format(device_id)
+            # net = torch.nn.DataParallel(net).to(self.device)
         elif self.device == 'cpu':
             net = net.to(self.device)
         else:  # already outside as xm.xla_device() in run.py
@@ -210,7 +220,7 @@ class Trainer(BaseTrainer):
             net.train()
 
             # You have to initiate a new loader each time for tpu
-            if self.device not in ['cuda', 'cpu']:
+            if self.device not in ['cuda', 'cpu'] and self.device[:4] != 'cuda':
                 # Make train loader parallel for TPU
                 train_loader = pl.ParallelLoader(train_loader_base, [self.device])
                 train_loader = train_loader.per_device_loader(self.device)
@@ -222,7 +232,7 @@ class Trainer(BaseTrainer):
                 inputs, y, _ = data
 
                 # Move data to device; TPU has taken care of it at start
-                if self.device in ['cpu', 'cuda']:
+                if self.device in ['cpu', 'cuda'] or self.device[:4] == 'cuda':
                     inputs, y = inputs.to(self.device), y.to(self.device)
 
                 # Do subset selection to improve generalization
@@ -246,9 +256,10 @@ class Trainer(BaseTrainer):
                 # Backpropagation
                 optimizer.zero_grad()
                 losses_train.backward()
-
+                # torch.save(utils.get_net_dict(net, self.device), self.final_path / 'state_dicts' / f'step_{self.step}.pkl')
+                # self.step += 1
                 # Step optimizer
-                if self.device in ['cpu', 'cuda']:
+                if self.device in ['cpu', 'cuda'] or self.device[:4] == 'cuda':
                     optimizer.step()
                 else:
                     xm.optimizer_step(optimizer)
@@ -267,7 +278,7 @@ class Trainer(BaseTrainer):
             net.eval()
 
             # You have to initiate a new loader each time for TPU
-            if self.device not in ['cuda', 'cpu']:
+            if self.device not in ['cuda', 'cpu'] and self.device[:4] != 'cuda':
                 # Make train loader parallel for TPU
                 train_loader = pl.ParallelLoader(train_loader_base, [self.device])
                 train_loader = train_loader.per_device_loader(self.device)
@@ -280,12 +291,13 @@ class Trainer(BaseTrainer):
             # Notice that we use for loop again for the train loader
             # This is to accommodate the TPU loader
             # If you only use GPU, merge this with the above
+            train_loader.sampler.set_epoch(epoch)
             for data_ in train_loader:
                 # Set up data
                 inputs_, y_, _ = data_
 
                 # Move data to device
-                if self.device in ['cpu', 'cuda']:
+                if self.device in ['cpu', 'cuda'] or self.device[:4] == 'cuda':
                     inputs_, y_ = inputs_.to(self.device), y_.to(self.device)
 
                 # Set the require grad as True to use regularizer
@@ -315,7 +327,7 @@ class Trainer(BaseTrainer):
                 inputs_, y_, _ = data_
                 inputs_.requires_grad = True
 
-                if self.device in ['cpu', 'cuda']:
+                if self.device in ['cpu', 'cuda'] or self.device[:4] == 'cuda':
                     inputs_, y_ = inputs_.to(self.device), y_.to(self.device)
 
                 # Compute prediction error
@@ -345,7 +357,7 @@ class Trainer(BaseTrainer):
             scheduler.step()
 
             # ======================= Get SNR  ======================= #
-            if self.device not in ['cuda', 'cpu']:
+            if self.device not in ['cuda', 'cpu'] and self.device[:4] != 'cuda':
                 # Make train loader parallel for TPU
                 train_loader = pl.ParallelLoader(train_loader_base, [self.device])
                 train_loader = train_loader.per_device_loader(self.device)
@@ -358,7 +370,7 @@ class Trainer(BaseTrainer):
 
             # ================ Get Fisher Information  =============== #
             start_time_fisher = time.time()
-            if self.device not in ['cuda', 'cpu']:
+            if self.device not in ['cuda', 'cpu'] and self.device[:4] != 'cuda':
                 # Make train loader parallel for TPU
                 train_loader = pl.ParallelLoader(train_loader_base, [self.device])
                 train_loader = train_loader.per_device_loader(self.device)

@@ -1,0 +1,72 @@
+step  0
+Test Loss: 5.201477
+Test Accuracy: 0.011
+step  4
+Test Loss: 4.875007
+Test Accuracy: 0.014
+step  8
+Test Loss: 4.908928
+Test Accuracy: 0.015
+step  12
+Test Loss: 4.777633
+Test Accuracy: 0.035
+step  16
+Test Loss: 5.455941
+Test Accuracy: 0.042
+step  20
+Test Loss: 4.954406
+Test Accuracy: 0.058
+step  24
+Test Loss: 5.030980
+Test Accuracy: 0.082
+step  28
+Test Loss: 5.673634
+Test Accuracy: 0.083
+step  32
+Test Loss: 4.794511
+Test Accuracy: 0.109
+step  36
+Test Loss: 6.538975
+Test Accuracy: 0.093
+step  40
+Test Loss: 4.648854
+Test Accuracy: 0.138
+step  44
+Test Loss: 5.699763
+Test Accuracy: 0.128
+step  48
+Test Loss: 4.158988
+Test Accuracy: 0.198
+step  52
+Test Loss: 3.639047
+Test Accuracy: 0.234
+step  56
+Test Loss: 3.797127
+Test Accuracy: 0.192
+step  60
+Test Loss: 4.360043
+Test Accuracy: 0.223
+step  64
+Test Loss: 2.865581
+Test Accuracy: 0.333
+step  68
+Test Loss: 2.916552
+Test Accuracy: 0.325
+step  72
+Test Loss: 2.616559
+Test Accuracy: 0.372
+step  76
+Test Loss: 2.944690
+Test Accuracy: 0.329
+step  80
+Test Loss: 2.911747
+Test Accuracy: 0.337
+step  84
+Test Loss: 2.779456
+Test Accuracy: 0.372
+step  88
+Test Loss: 2.690949
+Test Accuracy: 0.370
+step  92
+Test Loss: 2.798311
+Test Accuracy: 0.335

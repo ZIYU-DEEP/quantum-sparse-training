@@ -28,7 +28,15 @@ class VGG(BaseNet):
                  out_dim=100):
         super(VGG, self).__init__()
         self.features = features
-        self.classifier = nn.Linear(512, out_dim)
+        self.classifier = self.classifier = nn.Sequential(
+            nn.Linear(512 * 7 * 7, 4096),
+            nn.ReLU(inplace=True),
+            nn.Dropout(),
+            nn.Linear(4096, 4096),
+            nn.ReLU(inplace=True),
+            nn.Dropout(),
+            nn.Linear(4096, out_dim)
+        )
         self._initialize_weights()
 
     def forward(self, x):

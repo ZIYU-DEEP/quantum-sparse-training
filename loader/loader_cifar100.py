@@ -6,7 +6,8 @@ Note: Haven't test the file yet! (Feb 13, 2022)
 
 from .loader_base import BaseLoader
 from PIL import Image
-from torch.utils.data import DataLoader
+import torch
+from torch.utils.data import DataLoader, Subset
 from torch.utils.data import ConcatDataset
 from torchvision.datasets import CIFAR100
 
@@ -76,10 +77,11 @@ class CIFAR100Loader(BaseLoader):
                                         transform=transform_train,
                                         download=True)
 
-            test_set = CIFAR100Dataset(root=self.root,
+            test_set = Subset(CIFAR100Dataset(root=self.root,
                                        train=False,
                                        transform=transform_test,
-                                       download=True)
+                                       download=True),
+                            torch.arange(6400))
 
             all_set = None  # Will remove this redundancy in future commits
 
@@ -94,7 +96,7 @@ class CIFAR100Loader(BaseLoader):
 
     def loaders(self,
                 batch_size: int=128,
-                shuffle_train: bool=True,
+                shuffle_train: bool=False,
                 shuffle_test: bool=False,
                 shuffle_all: bool=True,
                 num_workers: int=0):

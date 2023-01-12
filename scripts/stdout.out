@@ -1,0 +1,10 @@
+Working directory is /home/minzhaoliu/quantum-sparse-training/scripts
+Jobid: 353301.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3003c0s25b0n0
+Running on nodes x3003c0s25b0n0.hsn.cm.polaris.alcf.anl.gov
+NUM_OF_NODES= 1 TOTAL_NUM_RANKS= 17 RANKS_PER_NODE= 17 THREADS_PER_RANK= 1
+Working directory is /home/minzhaoliu/quantum-sparse-training/scripts
+Jobid: 353454.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3005c0s1b0n0
+Running on nodes x3005c0s1b0n0.hsn.cm.polaris.alcf.anl.gov
+NUM_OF_NODES= 1 TOTAL_NUM_RANKS= 17 RANKS_PER_NODE= 17 THREADS_PER_RANK= 1

@@ -1,0 +1,36 @@
+Here
+Here
+Here
+Here
+rank 1 using gpu 1
+rank 0 using gpu 0
+rank 3 using gpu 3
+rank 2 using gpu 2
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+pruned
+pruned
+pruned
+pruned
+LanczosApproxSpec
+Estimating spectrum range
+Hv time:  8.911555767059326
+Lanczos iter:  8.966398239135742
+Hv time:  8.11673092842102
+Lanczos iter:  8.17991590499878
+Hv time:  8.116139650344849
+Lanczos iter:  8.17615556716919
+Hv time:  8.11696481704712
+Lanczos iter:  8.17424488067627
+Hv time:  8.120484113693237
+Lanczos iter:  8.177700757980347
+Hv time:  8.116905927658081
+Lanczos iter:  8.177155017852783
+Hv time:  8.117249727249146
+Lanczos iter:  8.177770614624023

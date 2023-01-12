@@ -1,0 +1,184 @@
+#!/bin/bash
+# UG Section 2.5, page UG-24 Job Submission Options
+# Add another # at the beginning of the line to comment out a line
+# NOTE: adding a switch to the command line will override values in this file.
+
+# These options are MANDATORY at ALCF; Your qsub will fail if you don't provide them.
+#PBS -A QTensor
+#PBS -l walltime=01:00:00
+
+# Highly recommended 
+# The first 15 characters of the job name are displayed in the qstat output:
+#PBS -N ode
+#file systems used by the job
+#PBS -l filesystems=home:eagle
+#PBS -l select=1:system=polaris
+
+# If you need a queue other than the default, which is prod (uncomment to use)
+#PBS -q debug
+
+# Controlling the output of your application
+# UG Sec 3.3 page UG-42 Managing Output and Error Files
+# By default, PBS spools your output on the compute node and then uses scp to move it the
+# destination directory after the job finishes.  Since we have globally mounted file systems
+# it is highly recommended that you use the -k option to write directly to the destination
+# the doe stands for direct, output, error
+#PBS -k doe
+#PBS -o ./stdout.out
+#PBS -e ./stderr.out
+
+echo Working directory is $PBS_O_WORKDIR
+cd $PBS_O_WORKDIR
+
+echo Jobid: $PBS_JOBID
+echo Running on host `hostname`
+echo Running on nodes `cat $PBS_NODEFILE`
+
+module load conda
+conda activate mpi_boson
+
+# Python arguments
+random_state=1988
+random_state_pre=1989
+results_root=/grand/projects/QTensor/ODE_ML/results
+
+# ################################################
+# 0. Arguments
+# ################################################
+# ================================================
+# (You can edit here) General Arguments
+# ================================================
+# Arguments for network
+net_name=resnet
+depth=32
+widen_factor=4
+
+# Arguments for [dense training]
+lr_pre=0.1
+lr_schedule_pre=stepwise
+lr_milestones_pre=100-150
+lr_gamma_pre=0.1
+n_epochs_pre=50
+batch_size_pre=512
+
+# Arguments for [sparse training]
+lr_finetune=0.01
+lr_scratch=0.1
+lr_schedule=stepwise
+lr_milestones=100-200
+lr_gamma=0.1
+n_epochs_finetune=10
+n_epochs_scratch=1
+batch_size=512
+
+# Arguments for dataset
+loader_name=cifar100
+filename=CIFAR100
+out_dim=100
+
+
+# Arguments for pruning
+prune_method=l1
+prune_last=0
+
+# Other unimportant Arguments
+optimizer_name=sgd
+momentum=0.9
+weight_decay=0.0002
+device=cuda
+init_method=kaiming
+n_jobs_dataloader=32
+
+# Arguments for saving things
+save_best=1
+save_snr=0
+save_fisher=0
+
+# ================================================
+# (You can edit here) Arguments for Fisher
+# ================================================
+# The loader to use when evaluating fisher
+use_loader=train
+
+# Set some proper range to load
+start_epoch=0
+end_epoch=10
+
+# Fisher metrics
+fisher_method=nngeometry
+fisher_metric=fim_monte_carlo
+monte_carlo_samples=1000
+monte_carlo_trials=5
+batch_size_fisher=256
+
+
+# ################################################
+# 1. Train the dense model
+# ################################################
+# ================================================
+# Automatically set the path
+# ================================================
+NET=${net_name}-${depth}-${widen_factor}
+EPOCH=epochs_${n_epochs_pre}
+BATCH=batch_${batch_size_pre}
+OPTIM=${optimizer_name}_
+OPTIM+=lr_${lr_pre}-${lr_schedule_pre}-${lr_milestones_pre}-${lr_gamma_pre}_
+OPTIM+=mm_${momentum}_w_decay_${weight_decay}_init_${init_method}
+SEED=seed_${random_state_pre}
+
+PRE_PATH=${results_root}/${loader_name}/${NET}/dense/${EPOCH}_${BATCH}_${OPTIM}_${SEED}
+PRE_PATH_MODEL=${results_root}/${loader_name}/${NET}/dense/${EPOCH}_${BATCH}_${OPTIM}_${SEED}/model_best.tar
+PRE_PATH_MODEL=${results_root}/${loader_name}/${NET}/dense/${EPOCH}_${BATCH}_${OPTIM}_${SEED}/model_best.tar
+echo ${PRE_PATH}
+
+# ================================================
+# Dense model training
+# python run.py -m 'dense' -lp 0 -ln ${loader_name} -fn ${filename} -rs ${random_state_pre} -nt ${net_name} -dp ${depth} -wf ${widen_factor} -ot ${out_dim} -im ${init_method} -on ${optimizer_name} -mm ${momentum} -lr ${lr_pre} -ls ${lr_schedule_pre} -lm ${lr_milestones_pre} -lg ${lr_gamma_pre} -ne ${n_epochs_pre} -bs ${batch_size_pre} -wt ${weight_decay} -dv ${device} -nj ${n_jobs_dataloader} -sb ${save_best} -ss ${save_snr} -sf ${save_fisher} -rr ${results_root}
+
+
+# ################################################ #
+# 2. Sparse training
+# ################################################ #
+# Set the path
+OPTIM_SP=${optimizer_name}_
+OPTIM_SP+=lr_${lr_finetune}-${lr_schedule}-${lr_milestones}-${lr_gamma}_
+OPTIM_SP+=mm_${momentum}_w_decay_${weight_decay}_init_${init_method}
+
+# ================================================
+# Sparse finetuning
+# ================================================
+for prune_ratio in 0.9
+do
+    # [PATH] Set the path
+    FINETUNE_PATH=${results_root}/${loader_name}/${NET}/sparse-finetune/method_${prune_method}_ratio_${prune_ratio}_epochs_${n_epochs_finetune}_batch_${batch_size}_${OPTIM_SP}_seed_${random_state}_epoch_pre_${n_epochs_pre}_batch_pre_${batch_size_pre}_lr_pre_${lr_pre}-${lr_schedule_pre}-${lr_milestones_pre}-${lr_gamma_pre}
+    echo ${FINETUNE_PATH}
+
+    # [TRAIN] Train the model
+    python run.py -m 'sparse-finetune' -pm ${prune_method} -lp 1 -ln ${loader_name} -fn ${filename} -rs ${random_state} -nt ${net_name} -dp ${depth} -wf ${widen_factor} -ot ${out_dim} -im ${init_method} -on ${optimizer_name} -mm ${momentum} -lr ${lr_finetune} -ls ${lr_schedule} -lm ${lr_milestones} -lg ${lr_gamma} -nep ${n_epochs_pre} -ne ${n_epochs_finetune} -bs ${batch_size} -wt ${weight_decay} -dv ${device} -nj ${n_jobs_dataloader} -pp ${PRE_PATH_MODEL} -lrp ${lr_pre} -lsp ${lr_schedule_pre} -lmp ${lr_milestones_pre} -lgp ${lr_gamma_pre} -bsp ${batch_size_pre} -sb ${save_best} -ss ${save_snr} -sf ${save_fisher} -pr ${prune_ratio} -pl ${prune_last} -rr ${results_root}
+
+    # # [TRAIN] Reload and continue training (to combat the 4-hour cluster limit)
+    # python run.py -m 'sparse-finetune' -pm ${prune_method} -lp 1 -ln ${loader_name} -fn ${filename} -rs ${random_state} -nt ${net_name} -dp ${depth} -wf ${widen_factor} -ot ${out_dim} -im ${init_method} -on ${optimizer_name} -mm ${momentum} -lr ${lr_finetune} -ls ${lr_schedule} -lm ${lr_milestones} -lg ${lr_gamma} -nep ${n_epochs_pre} -ne ${n_epochs_finetune} -bs ${batch_size} -wt ${weight_decay} -dv ${device} -nj ${n_jobs_dataloader} -pp ${PRE_PATH_MODEL} -lrp ${lr_pre} -lsp ${lr_schedule_pre} -lmp ${lr_milestones_pre} -lgp ${lr_gamma_pre} -bsp ${batch_size_pre} -sb ${save_best} -ss ${save_snr} -sf ${save_fisher} -pr ${prune_ratio} -pl ${prune_last} -rr ${results_root} -ree 180
+done
+
+
+# # ================================================
+# # Sparse scratch
+# # ================================================
+# for prune_ratio in 0.9
+# do
+#     # [PATH] Set the path
+#     SCRATCH_PATH=${results_root}/${loader_name}/${NET}/sparse-scratch/method_${prune_method}_ratio_${prune_ratio}_epochs_${n_epochs_scratch}_batch_${batch_size}_${OPTIM_SP}_seed_${random_state}_epoch_pre_${n_epochs_pre}_batch_pre_${batch_size_pre}_lr_pre_${lr_pre}-${lr_schedule_pre}-${lr_milestones_pre}-${lr_gamma_pre}
+#     echo ${SCRATCH_PATH}
+
+#     # # [TRAIN] Train the model
+#     python run.py  -m 'sparse-scratch' -pm ${prune_method} -lp 1 -ln ${loader_name} -fn ${filename} -rs ${random_state} -nt ${net_name} -dp ${depth} -wf ${widen_factor} -ot ${out_dim} -im ${init_method} -on ${optimizer_name} -mm ${momentum} -lr ${lr_scratch} -ls ${lr_schedule} -lm ${lr_milestones} -lg ${lr_gamma} -nep ${n_epochs_pre} -ne ${n_epochs_scratch} -bs ${batch_size} -wt ${weight_decay} -dv ${device} -nj ${n_jobs_dataloader} -pp ${PRE_PATH_MODEL} -lrp ${lr_pre} -lsp ${lr_schedule_pre} -lmp ${lr_milestones_pre} -lgp ${lr_gamma_pre} -bsp ${batch_size_pre} -sb ${save_best} -ss ${save_snr} -sf ${save_fisher} -pr ${prune_ratio} -pl ${prune_last} -rr ${results_root}
+
+#     # # Give the acces
+#     # chmod 777 ${results_root}
+
+#     # # [TRAIN] Reload and continue training (to combat the 4-hour cluster limit)
+#     # python run.py  -m 'sparse-scratch' -pm ${prune_method} -lp 1 -ln ${loader_name} -fn ${filename} -rs ${random_state} -nt ${net_name} -dp ${depth} -wf ${widen_factor} -ot ${out_dim} -im ${init_method} -on ${optimizer_name} -mm ${momentum} -lr ${lr_scratch} -ls ${lr_schedule} -lm ${lr_milestones} -lg ${lr_gamma} -nep ${n_epochs_pre} -ne ${n_epochs_scratch} -bs ${batch_size} -wt ${weight_decay} -dv ${device} -nj ${n_jobs_dataloader} -pp ${PRE_PATH_MODEL} -lrp ${lr_pre} -lsp ${lr_schedule_pre} -lmp ${lr_milestones_pre} -lgp ${lr_gamma_pre} -bsp ${batch_size_pre} -sb ${save_best} -ss ${save_snr} -sf ${save_fisher} -pr ${prune_ratio} -pl ${prune_last} -rr ${results_root} -ree 180
+
+#     # Give the acces
+#     chmod 777 ${results_root}
+# done

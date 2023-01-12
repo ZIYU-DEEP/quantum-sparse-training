@@ -1,0 +1,996 @@
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 374729.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3005c0s13b1n0
+Running on nodes x3005c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 374742.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3006c0s13b0n0
+Running on nodes x3006c0s13b0n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 374745.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3006c0s13b0n0
+Running on nodes x3006c0s13b0n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 374749.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3005c0s37b0n0
+Running on nodes x3005c0s37b0n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+./data/ImageNet
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 374755.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3005c0s37b0n0
+Running on nodes x3005c0s37b0n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+/grand/QTensorImageNet
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 374756.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3005c0s37b1n0
+Running on nodes x3005c0s37b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+/grand/QTensor/ImageNet
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 382880.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3004c0s25b1n0
+Running on nodes x3004c0s25b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+/grand/QTensor/ImageNet
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 386404.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3004c0s31b0n0
+Running on nodes x3004c0s31b0n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+/grand/QTensor/ImageNet
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 386425.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3103c0s19b1n0
+Running on nodes x3103c0s19b1n0.hsn.cm.polaris.alcf.anl.gov x3103c0s1b0n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 387723.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3004c0s13b0n0
+Running on nodes x3004c0s13b0n0.hsn.cm.polaris.alcf.anl.gov x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 387780.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3004c0s13b0n0
+Running on nodes x3004c0s13b0n0.hsn.cm.polaris.alcf.anl.gov x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 387801.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3004c0s13b0n0
+Running on nodes x3004c0s13b0n0.hsn.cm.polaris.alcf.anl.gov x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 387819.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3005c0s13b0n0
+Running on nodes x3005c0s13b0n0.hsn.cm.polaris.alcf.anl.gov x3005c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+x3005c0s13b0n0.hsn.cm.polaris.alcf.anl.gov
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 387850.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3004c0s13b0n0
+Running on nodes x3004c0s13b0n0.hsn.cm.polaris.alcf.anl.gov x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+x3004c0s13b0n0
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 388050.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3004c0s13b0n0
+Running on nodes x3004c0s13b0n0.hsn.cm.polaris.alcf.anl.gov x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+x3004c0s13b0n0
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 388059.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3014c0s13b0n0
+Running on nodes x3014c0s13b0n0.hsn.cm.polaris.alcf.anl.gov x3014c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+x3014c0s13b0n0
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 388224.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3005c0s19b0n0
+Running on nodes x3005c0s19b0n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+x3005c0s19b0n0
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 388258.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3005c0s19b0n0
+Running on nodes x3005c0s19b0n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+x3005c0s19b0n0
+Start running basic DDP example on rank 0.
+Start running basic DDP example on rank 2.Start running basic DDP example on rank 1.
+
+Start running basic DDP example on rank 3.
+stepped
+stepped
+stepped
+stepped
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 388269.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3203c0s13b0n0
+Running on nodes x3203c0s13b0n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+x3203c0s13b0n0
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 388313.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3203c0s7b1n0
+Running on nodes x3203c0s7b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+x3203c0s7b1n0
+Here0
+Here0
+Here0
+Here0
+/grand/QTensor/ImageNet/grand/QTensor/ImageNet
+
+/grand/QTensor/ImageNet/grand/QTensor/ImageNet
+
+Here1
+Here1
+Here1
+Here1
+Here2
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+Here3
+Start running on rank 0.
+Here2Here2
+
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+Here3
+Here3Start running on rank 2.
+
+Start running on rank 3.
+Here2
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+Here3
+Start running on rank 1.
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 388358.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3005c0s13b0n0
+Running on nodes x3005c0s13b0n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+x3005c0s13b0n0
+Here0
+Here0
+Here0
+Here0
+/grand/QTensor/ImageNet
+/grand/QTensor/ImageNet/grand/QTensor/ImageNet
+
+/grand/QTensor/ImageNet
+Here1
+Here1
+Here1
+Here1
+Here2
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+Here2
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+Here2
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+Here2
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+Here3
+Here3Start running on rank 0.
+
+Here3Start running on rank 1.Here3
+
+
+Start running on rank 2.
+Start running on rank 3.
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 388517.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3105c0s37b1n0
+Running on nodes x3105c0s37b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+x3105c0s37b1n0
+Here0Here0
+
+Here0
+Here0
+/grand/QTensor/ImageNet
+/grand/QTensor/ImageNet/grand/QTensor/ImageNet
+/grand/QTensor/ImageNet
+
+Here1Here1Here1
+
+Here1
+
+Here2
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+Here2
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+Here3
+Start running on rank 1.
+Here2
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+Here3
+Start running on rank 3.
+Here3
+Start running on rank 0.
+Here2
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+Here3
+Start running on rank 2.
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 388562.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3005c0s13b0n0
+Running on nodes x3005c0s13b0n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+x3005c0s13b0n0
+Here0
+Here0
+Here0
+Here0
+/grand/QTensor/ImageNet
+/grand/QTensor/ImageNet
+/grand/QTensor/ImageNet/grand/QTensor/ImageNet
+
+Here1
+Here1
+Here1
+Here1
+Here2
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+Here3
+Start running on rank 3.
+Here2
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+Here3
+Start running on rank 2.
+Here2
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+Here3
+Start running on rank 0.
+Here2
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+Here3
+Start running on rank 1.
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 388898.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3004c0s13b0n0
+Running on nodes x3004c0s13b0n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+x3004c0s13b0n0
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 388899.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3006c0s13b0n0
+Running on nodes x3006c0s13b0n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+x3006c0s13b0n0
+Here0
+Here0
+Here0
+Here0
+/grand/QTensor/ImageNet/grand/QTensor/ImageNet
+/grand/QTensor/ImageNet
+/grand/QTensor/ImageNet
+
+Here1
+Here1
+Here1
+Here1
+Here2
+Here2Optimizer: sgd; Learning rate: 0.1; Batch size: 128Here2
+
+
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+Here2
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 388911.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3006c0s13b0n0
+Running on nodes x3006c0s13b0n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+x3006c0s13b0n0
+Here0
+Here0
+Here0
+/grand/QTensor/ImageNet/grand/QTensor/ImageNet
+
+/grand/QTensor/ImageNet
+Here0
+/grand/QTensor/ImageNet
+Here1
+Here1
+Here1
+Here1
+Here2
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+Here3
+Start running on rank 0.
+Here2
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+Here3
+Start running on rank 3.
+Here2
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+Here3
+Start running on rank 1.
+Here2
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+Here3
+Start running on rank 2.
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 388915.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3006c0s13b0n0
+Running on nodes x3006c0s13b0n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+x3006c0s13b0n0
+Here0
+Here0
+/grand/QTensor/ImageNet
+/grand/QTensor/ImageNet
+Here0
+/grand/QTensor/ImageNet
+Here0
+/grand/QTensor/ImageNet
+Here1
+Here1
+Here1
+Here1
+Here2
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+Here3
+Start running on rank 2.
+Here2
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+Here3
+Start running on rank 0.
+Here2
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+Here3
+Start running on rank 3.
+Here2
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+Here3
+Start running on rank 1.
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 388922.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3006c0s13b0n0
+Running on nodes x3006c0s13b0n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+x3006c0s13b0n0
+Here0
+Here0
+/grand/QTensor/ImageNet
+/grand/QTensor/ImageNet
+Here0
+Here0
+/grand/QTensor/ImageNet
+/grand/QTensor/ImageNet
+Here1
+Here1
+Here1
+Here1
+Here2
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+Here3
+Start running on rank 0.
+Here2
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+Here3
+Start running on rank 1.
+Here2
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+Here3
+Start running on rank 2.
+Here2
+Optimizer: sgd; Learning rate: 0.1; Batch size: 128
+Here3
+Start running on rank 3.
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 388926.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3207c0s13b1n0
+Running on nodes x3207c0s13b1n0.hsn.cm.polaris.alcf.anl.gov x3207c0s19b0n0.hsn.cm.polaris.alcf.anl.gov x3207c0s19b1n0.hsn.cm.polaris.alcf.anl.gov x3207c0s1b0n0.hsn.cm.polaris.alcf.anl.gov x3004c0s13b0n0.hsn.cm.polaris.alcf.anl.gov x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov x3004c0s7b1n0.hsn.cm.polaris.alcf.anl.gov x3005c0s13b0n0.hsn.cm.polaris.alcf.anl.gov x3005c0s13b1n0.hsn.cm.polaris.alcf.anl.gov x3005c0s19b0n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+x3207c0s13b1n0
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 388930.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3005c0s19b1n0
+Running on nodes x3005c0s19b1n0.hsn.cm.polaris.alcf.anl.gov x3006c0s13b0n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+x3005c0s19b1n0
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 388932.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3004c0s13b0n0
+Running on nodes x3004c0s13b0n0.hsn.cm.polaris.alcf.anl.gov x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+x3004c0s13b0n0
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 388935.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3207c0s13b1n0
+Running on nodes x3207c0s13b1n0.hsn.cm.polaris.alcf.anl.gov x3207c0s19b0n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+x3207c0s13b1n0
+Start running basic DDP example on rank 0.
+Start running basic DDP example on rank 2.
+Start running basic DDP example on rank 1.
+Start running basic DDP example on rank 3.
+stepped
+stepped
+stepped
+stepped
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 388941.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3207c0s19b0n0
+Running on nodes x3207c0s19b0n0.hsn.cm.polaris.alcf.anl.gov x3207c0s19b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 388942.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3004c0s13b0n0
+Running on nodes x3004c0s13b0n0.hsn.cm.polaris.alcf.anl.gov x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+x3004c0s13b0n0.hsn.cm.polaris.alcf.anl.gov
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 388945.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3207c0s13b1n0
+Running on nodes x3207c0s13b1n0.hsn.cm.polaris.alcf.anl.gov x3207c0s19b0n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+x3207c0s13b1n0
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 388946.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3004c0s13b0n0
+Running on nodes x3004c0s13b0n0.hsn.cm.polaris.alcf.anl.gov x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+x3004c0s13b0n0
+Start running basic DDP example on rank 0.
+Start running basic DDP example on rank 0.
+Start running basic DDP example on rank 0.
+Start running basic DDP example on rank 0.
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 388954.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3004c0s13b0n0
+Running on nodes x3004c0s13b0n0.hsn.cm.polaris.alcf.anl.gov x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+x3004c0s13b0n0
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 388966.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3004c0s13b0n0
+Running on nodes x3004c0s13b0n0.hsn.cm.polaris.alcf.anl.gov x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+x3004c0s13b0n0
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 388974.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3004c0s13b0n0
+Running on nodes x3004c0s13b0n0.hsn.cm.polaris.alcf.anl.gov x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+x3004c0s13b0n0 x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+x3004c0s13b0n0
+x3004c0s13b0n0
+x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 388979.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3004c0s13b0n0
+Running on nodes x3004c0s13b0n0.hsn.cm.polaris.alcf.anl.gov x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+x3004c0s13b0n0
+/var/spool/pbs/aux/388979.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 388981.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3207c0s13b1n0
+Running on nodes x3207c0s13b1n0.hsn.cm.polaris.alcf.anl.gov x3207c0s19b0n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+master_address:x3207c0s13b1n0
+node:/var/spool/pbs/aux/388981.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 388986.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3004c0s13b0n0
+Running on nodes x3004c0s13b0n0.hsn.cm.polaris.alcf.anl.gov x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+master_address:x3004c0s13b0n0
+hostlist:x3004c0s13b0n0 x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+node:x3004c0s13b0n0
+node:x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 388999.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3004c0s13b0n0
+Running on nodes x3004c0s13b0n0.hsn.cm.polaris.alcf.anl.gov x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+master_address:x3004c0s13b0n0
+hostlist:x3004c0s13b0n0 x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+mport:2049
+node:x3004c0s13b0n0
+node:x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 389001.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3004c0s13b0n0
+Running on nodes x3004c0s13b0n0.hsn.cm.polaris.alcf.anl.gov x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+master_address:x3004c0s13b0n0
+hostlist:x3004c0s13b0n0 x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+mport:9093
+node:x3004c0s13b0n0
+node:x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 389004.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3207c0s13b1n0
+Running on nodes x3207c0s13b1n0.hsn.cm.polaris.alcf.anl.gov x3207c0s19b0n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+master_address:x3207c0s13b1n0
+hostlist:x3207c0s13b1n0 x3207c0s19b0n0.hsn.cm.polaris.alcf.anl.gov
+mport:8585
+node:x3207c0s13b1n0
+node:x3207c0s19b0n0.hsn.cm.polaris.alcf.anl.gov
+Start running basic DDP example on rank 5.
+Start running basic DDP example on rank 3.
+Start running basic DDP example on rank 0.
+Start running basic DDP example on rank 6.
+Start running basic DDP example on rank 2.
+Start running basic DDP example on rank 7.
+Start running basic DDP example on rank 1.
+Start running basic DDP example on rank 4.
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 389012.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3004c0s13b0n0
+Running on nodes x3004c0s13b0n0.hsn.cm.polaris.alcf.anl.gov x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+master_address:x3004c0s13b0n0
+hostlist:x3004c0s13b0n0 x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+mport:2049
+node:x3004c0s13b0n0
+node:x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+Start running basic DDP example on rank 6.
+6 2
+Start running basic DDP example on rank 0.
+0 0
+Start running basic DDP example on rank 3.
+3 3
+Start running basic DDP example on rank 4.
+4 0
+Start running basic DDP example on rank 2.
+2 2
+Start running basic DDP example on rank 5.
+5 1
+Start running basic DDP example on rank 7.
+7 3
+Start running basic DDP example on rank 1.
+1 1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 389018.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3004c0s13b0n0
+Running on nodes x3004c0s13b0n0.hsn.cm.polaris.alcf.anl.gov x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+master_address:x3004c0s13b0n0
+hostlist:x3004c0s13b0n0 x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+mport:9093
+MASTER_ADDR:MPORTx3004c0s13b0n0:9093
+node:x3004c0s13b0n0
+node:x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 389020.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3207c0s13b1n0
+Running on nodes x3207c0s13b1n0.hsn.cm.polaris.alcf.anl.gov x3207c0s19b0n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+master_address:x3207c0s13b1n0
+hostlist:x3207c0s13b1n0 x3207c0s19b0n0.hsn.cm.polaris.alcf.anl.gov
+mport:17001
+MASTER_ADDR:MPORTx3207c0s13b1n0:17001
+node:x3207c0s13b1n0
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 389021.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3207c0s19b1n0
+Running on nodes x3207c0s19b1n0.hsn.cm.polaris.alcf.anl.gov x3207c0s1b0n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+master_address:x3207c0s19b1n0
+hostlist:x3207c0s19b1n0 x3207c0s1b0n0.hsn.cm.polaris.alcf.anl.gov
+mport:17001
+MASTER_ADDR:MPORTx3207c0s19b1n0:17001
+node:x3207c0s19b1n0
+node:x3207c0s1b0n0.hsn.cm.polaris.alcf.anl.gov
+Start running basic DDP example on rank 0.
+0 0
+Start running basic DDP example on rank 3.
+3 3
+Start running basic DDP example on rank 2.Start running basic DDP example on rank 1.
+
+21  21
+
+Start running basic DDP example on rank 6.
+6 2
+Start running basic DDP example on rank 4.
+4 0
+Start running basic DDP example on rank 7.
+7 3
+Start running basic DDP example on rank 5.
+5 1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 389028.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3004c0s13b0n0
+Running on nodes x3004c0s13b0n0.hsn.cm.polaris.alcf.anl.gov x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+master_address:x3004c0s13b0n0
+hostlist:x3004c0s13b0n0 x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+mport:8585
+MASTER_ADDR:MPORT::x3004c0s13b0n0:8585
+node:x3004c0s13b0n0
+node:x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+Start running basic DDP example on rank 0.
+0 0
+Start running basic DDP example on rank 2.
+2 2
+Start running basic DDP example on rank 5.
+5 1
+Start running basic DDP example on rank 3.
+3 3
+Start running basic DDP example on rank 4.Start running basic DDP example on rank 6.
+
+46  02
+
+Start running basic DDP example on rank 1.Start running basic DDP example on rank 7.
+
+17  13
+
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 389058.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3005c0s13b0n0
+Running on nodes x3005c0s13b0n0.hsn.cm.polaris.alcf.anl.gov x3005c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+master_address:x3005c0s13b0n0
+hostlist:x3005c0s13b0n0 x3005c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+mport:17001
+MASTER_ADDR:MPORT::x3005c0s13b0n0:17001
+node:x3005c0s13b0n0
+node:x3005c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+Start running basic DDP example on rank 1.
+1 1
+Start running basic DDP example on rank 0.
+0 0
+stepped
+stepped
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 389064.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3005c0s13b0n0
+Running on nodes x3005c0s13b0n0.hsn.cm.polaris.alcf.anl.gov x3005c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+master_address:x3005c0s13b0n0
+hostlist:x3005c0s13b0n0 x3005c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+mport:17001
+MASTER_ADDR:MPORT::x3005c0s13b0n0:17001
+node:x3005c0s13b0n0
+node:x3005c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+Start running basic DDP example on rank 4.
+4 0
+Start running basic DDP example on rank 0.
+0 0
+Start running basic DDP example on rank 3.
+3 3
+Start running basic DDP example on rank 6.
+6 2
+Start running basic DDP example on rank 1.
+1 1
+Start running basic DDP example on rank 7.
+7 3
+Start running basic DDP example on rank 2.
+2 2
+Start running basic DDP example on rank 5.
+5 1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 389090.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3005c0s13b0n0
+Running on nodes x3005c0s13b0n0.hsn.cm.polaris.alcf.anl.gov x3005c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+master_address:x3005c0s13b0n0
+hostlist:x3005c0s13b0n0 x3005c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+mport:17001
+MASTER_ADDR:MPORT::x3005c0s13b0n0:17001
+node:x3005c0s13b0n0
+node:x3005c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+Start running basic DDP example on rank 2.
+2 2
+Start running basic DDP example on rank 4.
+4 0
+Start running basic DDP example on rank 1.
+1 1
+Start running basic DDP example on rank 3.
+3 3
+Start running basic DDP example on rank 6.
+6 2
+Start running basic DDP example on rank 0.
+0 0
+Start running basic DDP example on rank 5.
+5 1
+Start running basic DDP example on rank 7.
+7 3
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 389123.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3202c0s1b0n0
+Running on nodes x3202c0s1b0n0.hsn.cm.polaris.alcf.anl.gov x3202c0s1b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+master_address:x3202c0s1b0n0
+hostlist:x3202c0s1b0n0 x3202c0s1b1n0.hsn.cm.polaris.alcf.anl.gov
+mport:17001
+MASTER_ADDR:MPORT::x3202c0s1b0n0:17001
+node:x3202c0s1b0n0
+node:x3202c0s1b1n0.hsn.cm.polaris.alcf.anl.gov
+Start running basic DDP example on rank 5.
+5 1
+Start running basic DDP example on rank 7.
+7 3
+Start running basic DDP example on rank 4.
+4 0
+Start running basic DDP example on rank 6.
+6 2
+Start running basic DDP example on rank 1.
+1 1
+Start running basic DDP example on rank 2.
+2 2
+Start running basic DDP example on rank 0.
+0 0
+Start running basic DDP example on rank 3.
+3 3
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 389127.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3204c0s13b0n0
+Running on nodes x3204c0s13b0n0.hsn.cm.polaris.alcf.anl.gov x3204c0s19b0n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+master_address:x3204c0s13b0n0
+hostlist:x3204c0s13b0n0 x3204c0s19b0n0.hsn.cm.polaris.alcf.anl.gov
+mport:9093
+MASTER_ADDR:MPORT::x3204c0s13b0n0:9093
+node:x3204c0s13b0n0
+node:x3204c0s19b0n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 389129.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3004c0s13b1n0
+Running on nodes x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov x3004c0s7b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+master_address:x3004c0s13b1n0
+hostlist:x3004c0s13b1n0 x3004c0s7b1n0.hsn.cm.polaris.alcf.anl.gov
+mport:9092
+MASTER_ADDR:MPORT::x3004c0s13b1n0:9092
+node:x3004c0s13b1n0
+node:x3004c0s7b1n0.hsn.cm.polaris.alcf.anl.gov
+Start running basic DDP example on rank 4.
+4 0
+Start running basic DDP example on rank 1.
+1 1
+Start running basic DDP example on rank 6.
+6 2
+Start running basic DDP example on rank 5.
+5 1
+Start running basic DDP example on rank 0.
+0 0
+Start running basic DDP example on rank 2.Start running basic DDP example on rank 3.
+
+2 32 
+3
+Start running basic DDP example on rank 7.
+7 3
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 389137.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3015c0s7b0n0
+Running on nodes x3015c0s7b0n0.hsn.cm.polaris.alcf.anl.gov x3015c0s7b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+master_address:x3015c0s7b0n0
+hostlist:x3015c0s7b0n0 x3015c0s7b1n0.hsn.cm.polaris.alcf.anl.gov
+mport:17001
+MASTER_ADDR:MPORT::x3015c0s7b0n0:17001
+node:x3015c0s7b0n0
+node:x3015c0s7b1n0.hsn.cm.polaris.alcf.anl.gov
+Start running basic DDP example on rank 3.
+Start running basic DDP example on rank 2.3
+ 3
+2 2
+Start running basic DDP example on rank 0.
+0 0
+Start running basic DDP example on rank 7.
+7 3
+Start running basic DDP example on rank 5.
+5 1
+Start running basic DDP example on rank 1.
+1 1
+Start running basic DDP example on rank 6.
+6 2
+Start running basic DDP example on rank 4.
+4 0
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 389138.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3004c0s13b1n0
+Running on nodes x3004c0s13b1n0.hsn.cm.polaris.alcf.anl.gov x3004c0s7b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+master_address:x3004c0s13b1n0
+hostlist:x3004c0s13b1n0 x3004c0s7b1n0.hsn.cm.polaris.alcf.anl.gov
+mport:8585
+MASTER_ADDR:MPORT::x3004c0s13b1n0:8585
+node:x3004c0s13b1n0
+node:x3004c0s7b1n0.hsn.cm.polaris.alcf.anl.gov
+Start running basic DDP example on rank 3.
+3 3
+Start running basic DDP example on rank 7.
+7 3
+Start running basic DDP example on rank 5.
+5 1
+Start running basic DDP example on rank 0.
+0 0
+Start running basic DDP example on rank 2.
+2 2
+Start running basic DDP example on rank 1.
+1 1
+Start running basic DDP example on rank 6.
+6 2Start running basic DDP example on rank 4.
+
+4 0
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 389159.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3014c0s13b0n0
+Running on nodes x3014c0s13b0n0.hsn.cm.polaris.alcf.anl.gov x3014c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+master_address:x3014c0s13b0n0
+hostlist:x3014c0s13b0n0 x3014c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+mport:8585
+MASTER_ADDR:MPORT::x3014c0s13b0n0:8585
+node:x3014c0s13b0n0
+node:x3014c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+Start running basic DDP example on rank 0.
+Start running basic DDP example on rank 2.0
+ 02
+ 2
+Start running basic DDP example on rank 5.
+5 1
+Start running basic DDP example on rank 7.
+7 3
+Start running basic DDP example on rank 4.
+4 0
+Start running basic DDP example on rank 1.
+1 1
+Start running basic DDP example on rank 6.
+6 2
+Start running basic DDP example on rank 3.
+3 3
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 389161.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3109c0s7b0n0
+Running on nodes x3109c0s7b0n0.hsn.cm.polaris.alcf.anl.gov x3005c0s19b1n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+master_address:x3109c0s7b0n0
+hostlist:x3109c0s7b0n0 x3005c0s19b1n0.hsn.cm.polaris.alcf.anl.gov
+mport:2049
+MASTER_ADDR:MPORT::x3109c0s7b0n0:2049
+node:x3109c0s7b0n0
+node:x3005c0s19b1n0.hsn.cm.polaris.alcf.anl.gov
+Start running basic DDP example on rank 3.
+3 3
+Start running basic DDP example on rank 4.
+4 0
+Start running basic DDP example on rank 1.
+1 1
+Start running basic DDP example on rank 2.
+2 2
+Start running basic DDP example on rank 6.
+6 2
+Start running basic DDP example on rank 5.
+5 1Start running basic DDP example on rank 7.
+
+7 3
+Start running basic DDP example on rank 0.
+0 0
+x3109c0s7b0n0:13069:13069 [0] NCCL INFO Bootstrap : Using hsn1:10.201.2.104<0>
+x3109c0s7b0n0:13069:13069 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+x3109c0s7b0n0:13069:13069 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/RoCE [1]mlx5_1:1/RoCE ; OOB hsn1:10.201.2.104<0>
+x3109c0s7b0n0:13069:13069 [0] NCCL INFO Using network IB
+x3109c0s7b0n0:13071:13071 [1] NCCL INFO Bootstrap : Using hsn1:10.201.2.104<0>
+x3109c0s7b0n0:13071:13071 [1] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+x3109c0s7b0n0:13071:13071 [1] NCCL INFO NET/IB : Using [0]mlx5_0:1/RoCE [1]mlx5_1:1/RoCE ; OOB hsn1:10.201.2.104<0>
+x3109c0s7b0n0:13071:13071 [1] NCCL INFO Using network IB
+x3109c0s7b0n0:13075:13075 [3] NCCL INFO Bootstrap : Using hsn1:10.201.2.104<0>
+x3109c0s7b0n0:13075:13075 [3] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+x3109c0s7b0n0:13073:13073 [2] NCCL INFO Bootstrap : Using hsn1:10.201.2.104<0>
+x3109c0s7b0n0:13073:13073 [2] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+x3109c0s7b0n0:13073:13073 [2] NCCL INFO NET/IB : Using [0]mlx5_0:1/RoCE [1]mlx5_1:1/RoCE ; OOB hsn1:10.201.2.104<0>
+x3109c0s7b0n0:13073:13073 [2] NCCL INFO Using network IB
+x3109c0s7b0n0:13075:13075 [3] NCCL INFO NET/IB : Using [0]mlx5_0:1/RoCE [1]mlx5_1:1/RoCE ; OOB hsn1:10.201.2.104<0>
+x3109c0s7b0n0:13075:13075 [3] NCCL INFO Using network IB
+
+x3109c0s7b0n0:13069:13147 [0] init.cc:521 NCCL WARN Duplicate GPU detected : rank 4 and rank 0 both on CUDA device 7000
+
+x3109c0s7b0n0:13071:13154 [1] init.cc:521 NCCL WARN Duplicate GPU detected : rank 5 and rank 1 both on CUDA device 46000
+
+x3109c0s7b0n0:13073:13164 [2] init.cc:521 NCCL WARN Duplicate GPU detected : rank 6 and rank 2 both on CUDA device 85000
+
+x3109c0s7b0n0:13075:13165 [3] init.cc:521 NCCL WARN Duplicate GPU detected : rank 7 and rank 3 both on CUDA device c7000
+x3109c0s7b0n0:13069:13147 [0] NCCL INFO init.cc:904 -> 5
+x3109c0s7b0n0:13071:13154 [1] NCCL INFO init.cc:904 -> 5
+x3109c0s7b0n0:13073:13164 [2] NCCL INFO init.cc:904 -> 5
+x3109c0s7b0n0:13075:13165 [3] NCCL INFO init.cc:904 -> 5
+x3109c0s7b0n0:13069:13147 [0] NCCL INFO group.cc:72 -> 5 [Async thread]
+x3109c0s7b0n0:13071:13154 [1] NCCL INFO group.cc:72 -> 5 [Async thread]
+x3109c0s7b0n0:13073:13164 [2] NCCL INFO group.cc:72 -> 5 [Async thread]
+x3109c0s7b0n0:13075:13165 [3] NCCL INFO group.cc:72 -> 5 [Async thread]
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+Working directory is /home/minzhaoliu/quantum-sparse-training
+Jobid: 389164.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+Running on host x3112c0s31b0n0
+Running on nodes x3112c0s31b0n0.hsn.cm.polaris.alcf.anl.gov x3112c0s7b0n0.hsn.cm.polaris.alcf.anl.gov
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/dense/epochs_150_batch_128_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989
+master_address:x3112c0s31b0n0
+hostlist:x3112c0s31b0n0 x3112c0s7b0n0.hsn.cm.polaris.alcf.anl.gov
+mport:9093
+MASTER_ADDR:MPORT::x3112c0s31b0n0:9093
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-finetune/method_l1_ratio_0.8_epochs_2_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1
+/grand/projects/QTensor/ODE_ML/results/imagenet/vgg11/sparse-scratch/method_l1_ratio_0.9_epochs_25_batch_512_sgd_lr_0.1-stepwise-100-200-0.1_mm_0.9_w_decay_0.0002_init_kaiming_seed_1989_epoch_pre_150_batch_pre_128_lr_pre_0.1-stepwise-100-200-0.1

@@ -38,7 +38,7 @@ class Hessian:
         self.vecs                  = vecs
         self.vals                  = vals
 
-        self.device                = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+        self.device                = next(self.model.parameters()).device
 
         for i in range(len(self.vecs)):
             self.vecs[i] = self.my_device(self.vecs[i])
@@ -86,30 +86,30 @@ class Hessian:
 
                 # z^T (d f / d theta)
                 zT_df_dtheta = torch.autograd.grad(f,
-                                                   self.model.parameters(),
-                                                   z,
-                                                   create_graph=True)
+                                                    self.model.parameters(),
+                                                    z,
+                                                    create_graph=True)
 
                 # v^T (z^T (d f / d theta)) / dz
                 # (d f / d theta) v
                 df_dtheta_v = torch.autograd.grad(zT_df_dtheta,
-                                                  z,
-                                                  v)
+                                                    z,
+                                                    v)
 
                 dloss_df = torch.autograd.grad(loss,
-                                               f,
-                                               create_graph=True)
+                                                f,
+                                                create_graph=True)
 
                 d2loss_df2_df_dtheta_v = torch.autograd.grad(dloss_df,
-                                                             f,
-                                                             grad_outputs=df_dtheta_v)
+                                                                f,
+                                                                grad_outputs=df_dtheta_v)
 
                 Hg_ = torch.autograd.grad(f,
-                                          self.model.parameters(),
-                                          grad_outputs=d2loss_df2_df_dtheta_v)
+                                            self.model.parameters(),
+                                            grad_outputs=d2loss_df2_df_dtheta_v)
             elif self.hessian_type == 'H':
                 dloss_df = torch.autograd.grad(loss,
-                                               f)
+                                                f)
 
                 df_dtheta = torch.autograd.grad(f,
                                                 self.model.parameters(),
@@ -119,9 +119,9 @@ class Hessian:
                 df_dtheta[-1].requires_grad = True
 
                 Hg_ = torch.autograd.grad(df_dtheta,
-                                          self.model.parameters(),
-                                          v,
-                                          allow_unused=True)
+                                            self.model.parameters(),
+                                            v,
+                                            allow_unused=True)
 
                 zr = torch.zeros(df_dtheta[-1].shape)
 
@@ -130,12 +130,12 @@ class Hessian:
                 Hg_ = Hg_[:-1] + (zr,)
             elif self.hessian_type == 'Hessian':
                 grad = torch.autograd.grad(loss,
-                                           self.model.parameters(),
-                                           create_graph=True)
+                                            self.model.parameters(),
+                                            create_graph=True)
 
                 Hg_ = torch.autograd.grad(grad,
-                                          self.model.parameters(),
-                                          v)
+                                            self.model.parameters(),
+                                            v)
             else:
                 raise Exception('Wrong hessian type!')
 
@@ -427,6 +427,7 @@ class Hessian:
 
         for idx, batch in enumerate(self.loader, 1):
             print('Iteration: [{}/{}]'.format(idx, len(self.loader)))
+            batch[0].to(self.device), batch[1].to(self.device)
 
             sys.stdout.flush()
 
@@ -546,7 +547,8 @@ class Hessian:
             delta_ccp_E = delta_ccp_E.to(self.device)
 
             for idx, batch in enumerate(self.loader, 1):
-
+                
+                batch[0].to(self.device), batch[1].to(self.device)
                 input, target = batch[0], batch[1]
 
                 input = input.to(self.device)

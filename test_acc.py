@@ -26,7 +26,6 @@ from collections import OrderedDict
 
 import math
 import time
-import os
 import torch
 import joblib
 import logging
@@ -79,31 +78,11 @@ prune_indicator = p.prune_indicator
 batch_size = p.batch_size
 # device = p.device
 device = torch.device('cuda:{}'.format(gpu))
+# device = torch.device('cpu')
 # state_dict_path = final_path / 'state_dicts' / f'epoch_{p.no}.pkl'
-step = rank + rank//3 + 1
-if os.path.isfile(final_path / 'hessian_eigval_step_{}'.format(step)):
-    print('already done')
-    quit()
-print('rank {} step {}'.format(rank, step))
-state_dict_path = final_path / 'state_dicts' / f'step_{step}.pkl'
+
 log_path = final_path / 'hessian_spectrum.log'
 prune_ratio = p.prune_ratio  # Just a placeholder
-
-
-
-# ##################################################################
-# 1. Prepartions
-# ##################################################################
-# Set logger
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger()
-logger.setLevel(logging.INFO)
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-file_handler = logging.FileHandler(log_path)
-file_handler.setLevel(logging.INFO)
-file_handler.setFormatter(formatter)
-logger.addHandler(file_handler)
-logger.info(state_dict_path)
 
 # Set neccessities
 device = torch.device(device)
@@ -112,8 +91,8 @@ criterion = nn.CrossEntropyLoss()
 # Set the dataset
 dataset = CIFAR100Loader()
 train_loader, test_loader, _ = dataset.loaders(batch_size=batch_size,
-                                               shuffle_train=False,
-                                               shuffle_test=False)
+                                            shuffle_train=False,
+                                            shuffle_test=False)
 
 # Create the function to set the network
 def set_network(prune_indicator,
@@ -143,12 +122,32 @@ def set_network(prune_indicator,
     # Load the dict to net
     return net
 
+def test(net, test_loader):
+    criterion = nn.CrossEntropyLoss()
 
-# ##################################################################
-# 1. Calculate the Hessian
-# ##################################################################
-# Set network
-net = set_network(prune_indicator, prune_ratio, state_dict_path, device)
+    # Set up relavant information
+    epoch_loss, correct, n_batches = 0.0, 0, 0
+
+    # Start testing
+    net.eval()
+    with torch.no_grad():
+        for data in test_loader:
+            # Get data
+            inputs, y, _ = data
+            inputs, y = inputs.to(device), y.to(device)
+            outputs = net(inputs)
+
+            # Calculate loss and accuracy
+            loss = criterion(outputs, y)
+
+            # Record loss
+            epoch_loss += loss.item()
+            correct += (outputs.argmax(1) == y).type(torch.float).sum().item()
+            n_batches += 1
+
+    # Log results
+    print('Test Loss: {:.6f}'.format(epoch_loss / n_batches))
+    print('Test Accuracy: {:.3f}'.format(correct / len(test_loader.dataset)))
 
 # Set the loader
 if p.use_loader == 'train':
@@ -158,39 +157,17 @@ elif p.use_loader == 'test':
 else:
     data_loader = train_loader
 
-# Get logging
-logger.info(f'Getting hessian for batch size as {batch_size}...')
-
-# Wrap the Hessian class
-H = hessian.Hessian(loader=data_loader,
-                    model=net,
-                    hessian_type='Hessian')
-
-# Get the Hessian eigenvalue and the associated density
-H_eigval, H_eigval_density = H.LanczosApproxSpec(init_poly_deg=p.init_poly_deg,
-                                                 poly_deg=p.poly_deg)
-
-# Save the eigenvalue and the corresponding density
-# np.save(H_eigval, final_path / 'hessian_eigval_epoch_{}'.format(p.no))
-# np.save(H_eigval_density, final_path / 'hessian_eigval_density_epoch_{}'.format(p.no))
-np.save(final_path / 'hessian_eigval_step_{}'.format(step), H_eigval)
-np.save(final_path / 'hessian_eigval_density_step_{}'.format(step), H_eigval_density)
-logger.info(f'The spectrum is now saved in npz files.')
-
-
 # ##################################################################
-# 2. Plot the spectrum
+# 1. Calculate the Hessian
 # ##################################################################
-# Plot the hessian spectrum
-plt.figure(figsize=(15, 5.3))
-plt.semilogy(H_eigval, H_eigval_density,  color='darkorange', lw=3, alpha=0.8)
-plt.ylabel('Density of Hessian Spectrum', fontsize=20)
-plt.xlabel('Eigenvalue', fontsize=20)
-plt.xticks(fontsize=18)
-plt.yticks(fontsize=18)
-plt.tight_layout()
-sea.despine()
-plt.savefig(final_path / 'hessian_spectrum.pdf')
+# Set network
+if rank == 0:
+    for step in range(22, 96):
 
-# Log the results
-logger.info('Done!')
+        print('step ', step)
+        state_dict_path = final_path / 'state_dicts' / f'step_{step}.pkl'
+        net = set_network(prune_indicator, prune_ratio, state_dict_path, device)
+
+        if rank == 0:
+            # Wrap the Hessian class
+            test(net, data_loader)

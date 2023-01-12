@@ -29,6 +29,9 @@ except:
     pass
 # --------------------------------------------------------- #
 
+import torch.distributed as dist
+
+print('Here0')
 
 # ############################################
 # 1. Preparation
@@ -47,7 +50,7 @@ parser.add_argument('-m', '--mode', type=str, default='dense',
                              'sparse-scratch', 'lottery'])
 parser.add_argument('-pm', '--prune_method', type=str, default='l1',
                     help='Set the training mode',
-                    choices=['l1'])
+                    choices=['l1', 'random'])
 parser.add_argument('-pr', '--prune_ratio', type=float, default=0.9,
                     help='The ratio for sparse training')
 parser.add_argument('-pl', '--prune_last', type=int, default=0,
@@ -70,7 +73,7 @@ parser.add_argument('-ln', '--loader_name', type=str, default='toy',
                     help='The name for your dataset.',
                     choices=['toy', 'mnist', 'cifar10', 'cifar100',
                              'fmnist', 'cifar100_tpu',
-                             'cifar10_noisy', 'fmnist_noisy', 'tiny_imagenet'])
+                             'cifar10_noisy', 'fmnist_noisy', 'tiny_imagenet', 'imagenet'])
 parser.add_argument('-rt', '--root', type=str, default='./data/',
                     help='The root path for stored data.')
 parser.add_argument('-fn', '--filename', type=str, default='toy',
@@ -234,6 +237,7 @@ net_str = f'{p.net_name}'
 if p.net_name == 'mlp': net_str += f'-{p.hidden_act}-{p.hidden_dims}'
 if p.net_name == 'resnet': net_str += f'-{p.depth}-{p.widen_factor}'
 if p.net_name == 'densenet': net_str += f'-{p.dropRate}-{p.growthRate}-{p.compressionRate}'
+if p.net_name == 'vgg19' : net_str += f'-{p.depth}-{p.widen_factor}'
 
 # Configure the name for noisy training
 noise_str = ''
@@ -323,6 +327,7 @@ dataset = load_dataset(p.loader_name,
                        p.download)
 
 # ------------------ Set up model with trainer ------------------ #
+print('Here1')
 model = Model()
 model.set_network(p.net_name, p.in_dim, p.out_dim, p.hidden_act,
                   p.out_act, p.hidden_dims, p.depth, p.widen_factor,
@@ -388,6 +393,7 @@ if not p.resume_epoch:
             model = lottery_model
 
 # ---------------------- Training the model --------------------- #
+print('Here2')
 model.train(dataset, p.optimizer_name, p.momentum, p.lr, p.lr_schedule,
             p.lr_milestones, p.lr_gamma, p.n_epochs, p.batch_size,
             p.weight_decay, device, p.n_jobs_dataloader,

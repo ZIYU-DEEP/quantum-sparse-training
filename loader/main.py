@@ -10,6 +10,7 @@ from .loader_cifar10 import CIFAR10Loader
 from .loader_cifar10_noisy import CIFAR10NoisyLoader
 from .loader_cifar100 import CIFAR100Loader, CIFAR100TPULoader
 from .loader_tiny_imagenet import TinyImageNetLoader
+from .loader_imagenet import ImageNetLoader
 
 
 def load_dataset(loader_name: str='toy',
@@ -71,5 +72,11 @@ def load_dataset(loader_name: str='toy',
                                   filename,
                                   random_state,
                                   download)
+
+    if loader_name == 'imagenet':
+        return ImageNetLoader(root,
+                              filename,
+                              random_state,
+                              download)
 
     return None

@@ -1,0 +1,208 @@
+
+Lmod is automatically replacing "nvhpc/21.9" with "gcc/11.2.0".
+
+
+Lmod is automatically replacing "PrgEnv-nvhpc/8.3.3" with "PrgEnv-gnu/8.3.3".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-mpich/8.1.16
+
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "elastic_ddp.py", line 44, in <module>
+Traceback (most recent call last):
+  File "elastic_ddp.py", line 44, in <module>
+Traceback (most recent call last):
+  File "elastic_ddp.py", line 44, in <module>
+Traceback (most recent call last):
+  File "elastic_ddp.py", line 44, in <module>
+Traceback (most recent call last):
+  File "elastic_ddp.py", line 44, in <module>
+Traceback (most recent call last):
+  File "elastic_ddp.py", line 44, in <module>
+Traceback (most recent call last):
+  File "elastic_ddp.py", line 44, in <module>
+  File "elastic_ddp.py", line 44, in <module>
+            demo_basic()        demo_basic()        demo_basic()
+demo_basic()demo_basic()
+demo_basic()demo_basic()
+  File "elastic_ddp.py", line 31, in demo_basic
+
+
+  File "elastic_ddp.py", line 31, in demo_basic
+
+
+  File "elastic_ddp.py", line 31, in demo_basic
+  File "elastic_ddp.py", line 31, in demo_basic
+  File "elastic_ddp.py", line 31, in demo_basic
+  File "elastic_ddp.py", line 31, in demo_basic
+  File "elastic_ddp.py", line 31, in demo_basic
+    demo_basic()
+  File "elastic_ddp.py", line 31, in demo_basic
+    ddp_model = DDP(model, device_ids=[device_id])
+  File "/soft/datascience/conda/2022-09-08/mconda3/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 646, in __init__
+            ddp_model = DDP(model, device_ids=[device_id])            ddp_model = DDP(model, device_ids=[device_id])ddp_model = DDP(model, device_ids=[device_id])
+ddp_model = DDP(model, device_ids=[device_id])ddp_model = DDP(model, device_ids=[device_id])ddp_model = DDP(model, device_ids=[device_id])
+
+  File "/soft/datascience/conda/2022-09-08/mconda3/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 646, in __init__
+
+
+
+  File "/soft/datascience/conda/2022-09-08/mconda3/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 646, in __init__
+  File "/soft/datascience/conda/2022-09-08/mconda3/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 646, in __init__
+  File "/soft/datascience/conda/2022-09-08/mconda3/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 646, in __init__
+  File "/soft/datascience/conda/2022-09-08/mconda3/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 646, in __init__
+  File "/soft/datascience/conda/2022-09-08/mconda3/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 646, in __init__
+    ddp_model = DDP(model, device_ids=[device_id])
+  File "/soft/datascience/conda/2022-09-08/mconda3/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 646, in __init__
+                            _verify_param_shape_across_processes(self.process_group, parameters)_verify_param_shape_across_processes(self.process_group, parameters)_verify_param_shape_across_processes(self.process_group, parameters)_verify_param_shape_across_processes(self.process_group, parameters)_verify_param_shape_across_processes(self.process_group, parameters)_verify_param_shape_across_processes(self.process_group, parameters)_verify_param_shape_across_processes(self.process_group, parameters)
+
+
+
+
+
+
+  File "/soft/datascience/conda/2022-09-08/mconda3/lib/python3.8/site-packages/torch/distributed/utils.py", line 89, in _verify_param_shape_across_processes
+  File "/soft/datascience/conda/2022-09-08/mconda3/lib/python3.8/site-packages/torch/distributed/utils.py", line 89, in _verify_param_shape_across_processes
+  File "/soft/datascience/conda/2022-09-08/mconda3/lib/python3.8/site-packages/torch/distributed/utils.py", line 89, in _verify_param_shape_across_processes
+  File "/soft/datascience/conda/2022-09-08/mconda3/lib/python3.8/site-packages/torch/distributed/utils.py", line 89, in _verify_param_shape_across_processes
+  File "/soft/datascience/conda/2022-09-08/mconda3/lib/python3.8/site-packages/torch/distributed/utils.py", line 89, in _verify_param_shape_across_processes
+  File "/soft/datascience/conda/2022-09-08/mconda3/lib/python3.8/site-packages/torch/distributed/utils.py", line 89, in _verify_param_shape_across_processes
+  File "/soft/datascience/conda/2022-09-08/mconda3/lib/python3.8/site-packages/torch/distributed/utils.py", line 89, in _verify_param_shape_across_processes
+    _verify_param_shape_across_processes(self.process_group, parameters)
+  File "/soft/datascience/conda/2022-09-08/mconda3/lib/python3.8/site-packages/torch/distributed/utils.py", line 89, in _verify_param_shape_across_processes
+            return dist._verify_params_across_processes(process_group, tensors, logger)        return dist._verify_params_across_processes(process_group, tensors, logger)        return dist._verify_params_across_processes(process_group, tensors, logger)
+return dist._verify_params_across_processes(process_group, tensors, logger)return dist._verify_params_across_processes(process_group, tensors, logger)
+return dist._verify_params_across_processes(process_group, tensors, logger)return dist._verify_params_across_processes(process_group, tensors, logger)
+RuntimeError
+
+RuntimeError
+
+RuntimeError: RuntimeErrorRuntimeError: RuntimeError: RuntimeErrorNCCL error in: /soft/datascience/conda/2022-09-08/pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1191, invalid usage, NCCL version 2.10.3
+ncclInvalidUsage: This usually reflects invalid usage of NCCL library (such as too many async ops, too many collectives at once, mixing streams in a group, etc).    : : NCCL error in: /soft/datascience/conda/2022-09-08/pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1191, invalid usage, NCCL version 2.10.3
+ncclInvalidUsage: This usually reflects invalid usage of NCCL library (such as too many async ops, too many collectives at once, mixing streams in a group, etc).: NCCL error in: /soft/datascience/conda/2022-09-08/pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1191, invalid usage, NCCL version 2.10.3
+ncclInvalidUsage: This usually reflects invalid usage of NCCL library (such as too many async ops, too many collectives at once, mixing streams in a group, etc).: 
+return dist._verify_params_across_processes(process_group, tensors, logger)NCCL error in: /soft/datascience/conda/2022-09-08/pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1191, invalid usage, NCCL version 2.10.3
+ncclInvalidUsage: This usually reflects invalid usage of NCCL library (such as too many async ops, too many collectives at once, mixing streams in a group, etc).NCCL error in: /soft/datascience/conda/2022-09-08/pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1191, invalid usage, NCCL version 2.10.3
+ncclInvalidUsage: This usually reflects invalid usage of NCCL library (such as too many async ops, too many collectives at once, mixing streams in a group, etc).
+NCCL error in: /soft/datascience/conda/2022-09-08/pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1191, invalid usage, NCCL version 2.10.3
+ncclInvalidUsage: This usually reflects invalid usage of NCCL library (such as too many async ops, too many collectives at once, mixing streams in a group, etc).
+NCCL error in: /soft/datascience/conda/2022-09-08/pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1191, invalid usage, NCCL version 2.10.3
+ncclInvalidUsage: This usually reflects invalid usage of NCCL library (such as too many async ops, too many collectives at once, mixing streams in a group, etc).
+
+
+
+
+RuntimeError: NCCL error in: /soft/datascience/conda/2022-09-08/pytorch/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1191, invalid usage, NCCL version 2.10.3
+ncclInvalidUsage: This usually reflects invalid usage of NCCL library (such as too many async ops, too many collectives at once, mixing streams in a group, etc).
+ERROR:torch.distributed.elastic.multiprocessing.api:failed (exitcode: 1) local_rank: 0 (pid: 13069) of binary: /soft/datascience/conda/2022-09-08/mconda3/bin/python
+ERROR:torch.distributed.elastic.multiprocessing.api:failed (exitcode: 1) local_rank: 0 (pid: 13070) of binary: /soft/datascience/conda/2022-09-08/mconda3/bin/python
+Traceback (most recent call last):
+  File "/soft/datascience/conda/2022-09-08/mconda3/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/soft/datascience/conda/2022-09-08/mconda3/lib/python3.8/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 345, in wrapper
+    return f(*args, **kwargs)
+  File "/soft/datascience/conda/2022-09-08/mconda3/lib/python3.8/site-packages/torch/distributed/run.py", line 761, in main
+    run(args)
+  File "/soft/datascience/conda/2022-09-08/mconda3/lib/python3.8/site-packages/torch/distributed/run.py", line 752, in run
+    elastic_launch(
+  File "/soft/datascience/conda/2022-09-08/mconda3/lib/python3.8/site-packages/torch/distributed/launcher/api.py", line 131, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/soft/datascience/conda/2022-09-08/mconda3/lib/python3.8/site-packages/torch/distributed/launcher/api.py", line 245, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+elastic_ddp.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2023-01-12_16:44:36
+  host      : x3109c0s7b0n0.hsn.cm.polaris.alcf.anl.gov
+  rank      : 5 (local_rank: 1)
+  exitcode  : 1 (pid: 13071)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2023-01-12_16:44:36
+  host      : x3109c0s7b0n0.hsn.cm.polaris.alcf.anl.gov
+  rank      : 6 (local_rank: 2)
+  exitcode  : 1 (pid: 13073)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2023-01-12_16:44:36
+  host      : x3109c0s7b0n0.hsn.cm.polaris.alcf.anl.gov
+  rank      : 7 (local_rank: 3)
+  exitcode  : 1 (pid: 13075)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2023-01-12_16:44:36
+  host      : x3109c0s7b0n0.hsn.cm.polaris.alcf.anl.gov
+  rank      : 4 (local_rank: 0)
+  exitcode  : 1 (pid: 13069)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+Traceback (most recent call last):
+  File "/soft/datascience/conda/2022-09-08/mconda3/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/soft/datascience/conda/2022-09-08/mconda3/lib/python3.8/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 345, in wrapper
+    return f(*args, **kwargs)
+  File "/soft/datascience/conda/2022-09-08/mconda3/lib/python3.8/site-packages/torch/distributed/run.py", line 761, in main
+    run(args)
+  File "/soft/datascience/conda/2022-09-08/mconda3/lib/python3.8/site-packages/torch/distributed/run.py", line 752, in run
+    elastic_launch(
+  File "/soft/datascience/conda/2022-09-08/mconda3/lib/python3.8/site-packages/torch/distributed/launcher/api.py", line 131, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/soft/datascience/conda/2022-09-08/mconda3/lib/python3.8/site-packages/torch/distributed/launcher/api.py", line 245, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+elastic_ddp.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2023-01-12_16:44:36
+  host      : x3109c0s7b0n0.hsn.cm.polaris.alcf.anl.gov
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 13072)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2023-01-12_16:44:36
+  host      : x3109c0s7b0n0.hsn.cm.polaris.alcf.anl.gov
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 13074)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2023-01-12_16:44:36
+  host      : x3109c0s7b0n0.hsn.cm.polaris.alcf.anl.gov
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 13076)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2023-01-12_16:44:36
+  host      : x3109c0s7b0n0.hsn.cm.polaris.alcf.anl.gov
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 13070)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+
+Lmod is automatically replacing "nvhpc/21.9" with "gcc/11.2.0".
+
+
+Lmod is automatically replacing "PrgEnv-nvhpc/8.3.3" with "PrgEnv-gnu/8.3.3".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-mpich/8.1.16
+
