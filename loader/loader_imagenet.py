@@ -23,11 +23,10 @@ except:
     pass
 # --------------------------------------------------------- #
 
-import torch.distributed as dist
+# import torch.distributed as dist
 
-dist.init_process_group("nccl")
-rank = dist.get_rank()
-world_size = dist.get_world_size()
+# rank = dist.get_rank()
+# world_size = dist.get_world_size()
 
 # #########################################################################
 # 1. ImageNet Dataset
@@ -115,14 +114,14 @@ class ImageNetLoader(BaseLoader):
 
         # Set sampler for the train loader
         try:
-            train_sampler = DistributedSampler(self.train_set,
-                                               num_replicas=world_size,
-                                               rank=rank,
-                                               shuffle=True)
             # train_sampler = DistributedSampler(self.train_set,
-            #                                    num_replicas=xm.xrt_world_size(),
-            #                                    rank=xm.get_ordinal(),
+            #                                    num_replicas=world_size,
+            #                                    rank=rank,
             #                                    shuffle=True)
+            train_sampler = DistributedSampler(self.train_set,
+                                               num_replicas=xm.xrt_world_size(),
+                                               rank=xm.get_ordinal(),
+                                               shuffle=True)
 
         except:
             # Add distributed as an argument

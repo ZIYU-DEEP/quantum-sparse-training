@@ -23,6 +23,10 @@ except:
     pass
 # --------------------------------------------------------- #
 
+# import torch.distributed as dist
+
+# rank = dist.get_rank()
+# world_size = dist.get_world_size()
 
 # #########################################################################
 # 1. CIFAR100 Dataset
@@ -31,6 +35,7 @@ class CIFAR100Dataset(CIFAR100):
     """
     Add an index to get item.
     """
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
@@ -106,6 +111,10 @@ class CIFAR100Loader(BaseLoader):
 
         # Set sampler for TPU
         try:
+            # sampler = DistributedSampler(self.train_set,
+            #                                    num_replicas=world_size,
+            #                                    rank=rank,
+            #                                    shuffle=True)
             sampler = DistributedSampler(self.train_set,
                                          num_replicas=xm.xrt_world_size(),
                                          rank=xm.get_ordinal(),

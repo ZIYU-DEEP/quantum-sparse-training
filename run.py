@@ -8,6 +8,9 @@
     [ ] SNIP pruning
 """
 
+# import torch.distributed as dist
+# dist.init_process_group("nccl")
+
 from loader import load_dataset
 from optim import Model
 from helper import pruner, plotter, utils
@@ -29,9 +32,6 @@ except:
     pass
 # --------------------------------------------------------- #
 
-import torch.distributed as dist
-
-print('Here0')
 
 # ############################################
 # 1. Preparation

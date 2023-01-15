@@ -110,14 +110,14 @@ class Trainer(BaseTrainer):
         # ==================== Configure device for network =================== #
         # Set the device for network
         if self.device[:4] == 'cuda':
-            print('Here3')
-            rank = dist.get_rank()
-            print(f"Start running on rank {rank}.")
-            device_id = rank % 4
-            net = net.to(device_id)
-            net = DDP(net, device_ids=[device_id])
-            self.device = 'cuda:{}'.format(device_id)
-            # net = torch.nn.DataParallel(net).to(self.device)
+            # print('Here3')
+            # rank = dist.get_rank()
+            # print(f"Start running on rank {rank}.")
+            # device_id = rank % 4
+            # net = net.to(device_id)
+            # net = DDP(net, device_ids=[device_id])
+            # self.device = 'cuda:{}'.format(device_id)
+            net = torch.nn.DataParallel(net).to(self.device)
         elif self.device == 'cpu':
             net = net.to(self.device)
         else:  # already outside as xm.xla_device() in run.py
@@ -206,6 +206,7 @@ class Trainer(BaseTrainer):
             net_dict = utils.get_net_dict(net, self.device)
 
             # Save net dicts; the function makes you save less in later epochs
+            # if rank == 0:
             utils.save_net_dict(net_dict=net_dict,
                                 epoch=epoch,
                                 is_last_epoch=epoch == self.n_epochs - 1,
@@ -291,7 +292,6 @@ class Trainer(BaseTrainer):
             # Notice that we use for loop again for the train loader
             # This is to accommodate the TPU loader
             # If you only use GPU, merge this with the above
-            train_loader.sampler.set_epoch(epoch)
             for data_ in train_loader:
                 # Set up data
                 inputs_, y_, _ = data_
@@ -417,6 +417,7 @@ class Trainer(BaseTrainer):
             if self.results['acc_test_list'][- 1] > self.best_test_acc:
                 self.best_test_acc = self.results['acc_test_list'][-1]
                 net_dict = utils.get_net_dict(net, self.device)
+                # if rank == 0:
                 torch.save(net_dict, self.final_path / 'model_best.tar')
 
             # Save the results

@@ -73,6 +73,7 @@ class Model:
         self.net = build_network(net_name, in_dim, out_dim, hidden_act,
                                  out_act, hidden_dims, depth, widen_factor,
                                  dropRate, growthRate, compressionRate)
+        print('Total trainable parameters: ', sum(p.numel() for p in self.net.parameters() if p.requires_grad))
 
         # if device == 'cuda':
         #     self.net = torch.nn.DataParallel(self.net).to(device)
