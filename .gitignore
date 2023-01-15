@@ -10,3 +10,4 @@ results
 scripts/epoch_dicts
 *.ipynb
 .ipynb_checkpoints/
+*.out

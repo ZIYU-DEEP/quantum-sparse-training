@@ -12,7 +12,7 @@
 #PBS -N ode
 #file systems used by the job
 #PBS -l filesystems=home:eagle
-#PBS -l select=2:system=polaris
+#PBS -l select=1:system=polaris
 
 # If you need a queue other than the default, which is prod (uncomment to use)
 #PBS -q debug-scaling
@@ -49,14 +49,14 @@ results_root=/grand/projects/QTensor/ODE_ML/results
 # (You can edit here) General Arguments
 # ================================================
 # Arguments for network
-net_name=vgg11
-depth=32
+net_name=vgg16
+depth=422
 widen_factor=4
 
 # Arguments for [dense training]
 lr_pre=0.1
 lr_schedule_pre=stepwise
-lr_milestones_pre=100-200
+lr_milestones_pre=50-100
 lr_gamma_pre=0.1
 n_epochs_pre=150
 batch_size_pre=128
@@ -72,11 +72,11 @@ n_epochs_scratch=25
 batch_size=512
 
 # Arguments for dataset
-# loader_name=cifar100
-# filename=CIFAR100
-loader_name=imagenet
-filename=ImageNet
-out_dim=1000
+loader_name=cifar100
+filename=CIFAR100
+# loader_name=imagenet
+# filename=ImageNet
+out_dim=100
 
 
 # Arguments for pruning
@@ -138,56 +138,51 @@ echo ${PRE_PATH}
 # ================================================
 # Dense model training
 # -rt should be set to /grand/QTensor for ImageNet only, other dataset can leave alone, default to /data
-# python run.py -m 'dense' -lp 0 -ln ${loader_name} -rt /grand/QTensor/ -fn ${filename} -rs ${random_state_pre} -nt ${net_name} -dp ${depth} -wf ${widen_factor} -ot ${out_dim} -im ${init_method} -on ${optimizer_name} -mm ${momentum} -lr ${lr_pre} -ls ${lr_schedule_pre} -lm ${lr_milestones_pre} -lg ${lr_gamma_pre} -ne ${n_epochs_pre} -bs ${batch_size_pre} -wt ${weight_decay} -dv ${device} -nj ${n_jobs_dataloader} -sb ${save_best} -ss ${save_snr} -sf ${save_fisher} -rr ${results_root}
+python run.py -m 'dense' -lp 0 -ln ${loader_name} -fn ${filename} -rs ${random_state_pre} -nt ${net_name} -dp ${depth} -wf ${widen_factor} -ot ${out_dim} -im ${init_method} -on ${optimizer_name} -mm ${momentum} -lr ${lr_pre} -ls ${lr_schedule_pre} -lm ${lr_milestones_pre} -lg ${lr_gamma_pre} -ne ${n_epochs_pre} -bs ${batch_size_pre} -wt ${weight_decay} -dv ${device} -nj ${n_jobs_dataloader} -sb ${save_best} -ss ${save_snr} -sf ${save_fisher} -rr ${results_root}
+
 export MASTER_ADDR=`hostname`
 echo master_address:$MASTER_ADDR
-#Number of processes per node to launch
-NPROC_PER_NODE=4
-MASTER=`/bin/hostname -s`
-cat $PBS_NODEFILE>nodelist
-#Make sure this node (MASTER) comes first
-SLAVES=`cat nodelist | grep -v $MASTER | uniq`
-#We want names of master and slave nodes
-HOSTLIST="$MASTER $SLAVES"
-#Get a random unused port on this host(MASTER)
-#First line gets list of unused ports
-#3rd line gets single random port from the list
-MPORT=`ss -tan | awk '{print $5}' | cut -d':' -f2 | \
-        grep "[2-9][0-9]\{3,3\}" | sort | uniq | shuf -n 1`
-echo hostlist:$HOSTLIST
-echo mport:$MPORT
-echo MASTER_ADDR:MPORT::$MASTER:$MPORT
-# RANK=0
+# #Number of processes per node to launch
+# NPROC_PER_NODE=4
+# MASTER=`/bin/hostname -s`
+# cat $PBS_NODEFILE>nodelist
+# #Make sure this node (MASTER) comes first
+# SLAVES=`cat nodelist | grep -v $MASTER | uniq`
+# #We want names of master and slave nodes
+# HOSTLIST="$MASTER $SLAVES"
+# #Get a random unused port on this host(MASTER)
+# #First line gets list of unused ports
+# #3rd line gets single random port from the list
+# MPORT=`ss -tan | awk '{print $5}' | cut -d':' -f2 | \
+#         grep "[2-9][0-9]\{3,3\}" | sort | uniq | shuf -n 1`
+# echo hostlist:$HOSTLIST
+# echo mport:$MPORT
+# echo MASTER_ADDR:MPORT::$MASTER:$MPORT
+# # RANK=0
 # for node in $HOSTLIST; do
 #         echo node:$node
 #         ssh -q $node \
-#                 module load nvhpc
+# #                 module load nvhpc
 #                 module load conda
 #                 conda activate base
-#                 # torchrun --nnodes=2 --nproc_per_node=4 --rdzv_id=100 --rdzv_backend=c10d --rdzv_endpoint=$MASTER elastic_ddp.py &
+# #                 # torchrun --nnodes=2 --nproc_per_node=4 --rdzv_id=100 --rdzv_backend=c10d --rdzv_endpoint=$MASTER elastic_ddp.py &
 #                 torchrun \
 #                 --nproc_per_node=$NPROC_PER_NODE \
 #                 --nnodes=2 \
 #                 --node_rank=$RANK \
 #                 elastic_ddp.py &
-#                 # python -m torch.distributed.launch \
-#                 # --nproc_per_node=$NPROC_PER_NODE \
-#                 # --nnodes=2 \
-#                 # --node_rank=$RANK \
-#                 # --master_addr="$MASTER" --master_port="$MPORT" \
-#                 # elastic_ddp.py &
-#         RANK=$((RANK+1))
+# #                 # python -m torch.distributed.launch \
+# #                 # --nproc_per_node=$NPROC_PER_NODE \
+# #                 # --nnodes=2 \
+# #                 # --node_rank=$RANK \
+# #                 # --master_addr="$MASTER" --master_port="$MPORT" \
+# #                 # elastic_ddp.py &
+# #         RANK=$((RANK+1))
 #         export NCCL_DEBUG=INFO
 # done
 # wait
 
-torchrun \
---nproc_per_node=$NPROC_PER_NODE \
---nnodes=2 \
---node_rank=$RANK \
-elastic_ddp.py &
-
-# torchrun --nnodes=2 --nproc_per_node=4 --rdzv_id=100 --rdzv_backend=c10d --rdzv_endpoint=$MASTER_ADDR run.py -m 'dense' -lp 0 -ln ${loader_name} -rt /grand/QTensor/ -fn ${filename} -rs ${random_state_pre} -nt ${net_name} -dp ${depth} -wf ${widen_factor} -ot ${out_dim} -im ${init_method} -on ${optimizer_name} -mm ${momentum} -lr ${lr_pre} -ls ${lr_schedule_pre} -lm ${lr_milestones_pre} -lg ${lr_gamma_pre} -ne ${n_epochs_pre} -bs ${batch_size_pre} -wt ${weight_decay} -dv ${device} -nj ${n_jobs_dataloader} -sb ${save_best} -ss ${save_snr} -sf ${save_fisher} -rr ${results_root}
+# torchrun --standalone --nnodes=1 --nproc_per_node=4 --rdzv_id=100 --rdzv_backend=c10d --rdzv_endpoint=$MASTER_ADDR run.py -m 'dense' -lp 0 -ln ${loader_name} -fn ${filename} -rs ${random_state_pre} -nt ${net_name} -dp ${depth} -wf ${widen_factor} -ot ${out_dim} -im ${init_method} -on ${optimizer_name} -mm ${momentum} -lr ${lr_pre} -ls ${lr_schedule_pre} -lm ${lr_milestones_pre} -lg ${lr_gamma_pre} -ne ${n_epochs_pre} -bs ${batch_size_pre} -wt ${weight_decay} -dv ${device} -nj ${n_jobs_dataloader} -sb ${save_best} -ss ${save_snr} -sf ${save_fisher} -rr ${results_root}
 
 # ################################################ #
 # 2. Sparse training

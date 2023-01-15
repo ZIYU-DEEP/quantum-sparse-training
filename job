@@ -1,0 +1,67 @@
+#!/bin/bash
+#PBS -A QTensor
+#PBS -l walltime=00:10:00
+
+# Highly recommended 
+# The first 15 characters of the job name are displayed in the qstat output:
+#PBS -N ode
+#file systems used by the job
+#PBS -l filesystems=home:eagle
+#PBS -l select=2:system=polaris
+
+#PBS -q debug-scaling
+
+#PBS -k doe
+#PBS -o ./stdout.out
+#PBS -e ./stderr.out
+
+echo Working directory is $PBS_O_WORKDIR
+cd $PBS_O_WORKDIR
+
+echo Jobid: $PBS_JOBID
+echo Running on host `hostname`
+echo Running on nodes `cat $PBS_NODEFILE`
+
+NPROC_PER_NODE=4
+MASTER=`/bin/hostname -s`
+MPORT=`ss -tan | awk '{print $5}' | cut -d':' -f2 | \
+        grep "[2-9][0-9]\{3,3\}" | sort | uniq | shuf -n 1`
+cat $PBS_NODEFILE>nodelist
+echo nodefile:
+more $PBS_NODEFILE
+echo end of nodefile
+#Make sure this node (MASTER) comes first
+SLAVES=`cat nodelist | grep -v $MASTER | uniq`
+#We want names of master and slave nodes
+HOSTLIST="$MASTER $SLAVES"
+echo hostlist:$HOSTLIST
+
+module load conda
+conda activate base
+
+# RANK=0
+# for node in $HOSTLIST; do
+#         echo node:$node
+#         ssh -q $node
+#                 module load conda
+#                 conda activate base
+#                 torchrun \
+#                 --nproc_per_node=$NPROC_PER_NODE \
+#                 --nnodes=2 \
+#                 --node_rank=$RANK \
+#                 --master_addr="$MASTER" --master_port="$MPORT" \
+#                 elastic_ddp.py &
+#         export NCCL_DEBUG=INFO
+#         RANK=$((RANK+1))
+# done
+# wait
+
+# MPI and OpenMP settings
+NNODES=`wc -l < $PBS_NODEFILE`
+NRANKS_PER_NODE=1
+NDEPTH=8
+NTHREADS=8
+
+NTOTRANKS=$(( NNODES * NRANKS_PER_NODE))
+
+mpiexec -n ${NTOTRANKS} --ppn ${NRANKS_PER_NODE} --depth=${NDEPTH} --cpu-bind depth --env OMP_NUM_THREADS=${NTHREADS} -env OMP_PLACES=threads python elastic_ddp.py
